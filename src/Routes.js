@@ -13,12 +13,12 @@ import TopNav from './components/TopNav'
 
 // Router
 export default [
-  { name: 'home', path: '/', components: { default: Home, nav: TopNav } },
-  { name: 'login', path: '/login', components: { default: Login, nav: TopNav } },
-  { name: 'logout', path: '/logout', components: { default: Logout } },
-  { name: 'matches', path: '/matches', components: { default: Matches, nav: TopNav } },
-  { name: 'connections', path: '/connections', components: { default: Connections, nav: TopNav } },
-  { name: 'groups', path: '/groups', components: { default: Groups, nav: TopNav } },
-  { name: 'profile', path: '/profile', components: { default: Profile, nav: TopNav } },
+  { name: 'Home', path: '/', components: { default: Home, nav: TopNav } },
+  { name: 'Login', path: '/login', components: { default: Login, nav: TopNav } },
+  { name: 'Logout', path: '/logout', components: { default: Logout } },
+  { name: 'Matches', path: '/matches', components: { default: Matches, nav: TopNav } },
+  { name: 'Connections', path: '/connections', components: { default: Connections, nav: TopNav } },
+  { name: 'Groups', path: '/groups', components: { default: Groups, nav: TopNav } },
+  { name: 'Profile', path: '/profile', components: { default: Profile, nav: TopNav } },
   { name: '404', path: '*', components: { default: NotFound, nav: TopNav } }
 ]

@@ -15,7 +15,7 @@
       </md-button>
     </md-whiteframe>
 
-    <md-sidenav id="main-sidebar" class="md-left md-fixed" ref="sidenav">
+    <md-sidenav id="main-sidebar" md-theme="white" class="md-left md-fixed" ref="sidenav">
       <md-toolbar class="sidebar-logo md-theme-white">
         <router-link to="/">
           <img src="../assets/logo.png" alt="Vue">
@@ -39,6 +39,11 @@
         <md-list-item @click="$refs.sidenav.close(); $router.push('/profile')" :class="{'md-accent': $route.path === '/profile'}">
           <md-icon>person</md-icon> <span>Profile</span>
         </md-list-item>
+
+        <md-list-item @click="$refs.sidenav.close(); $router.push('/login')" :class="{'md-accent': $route.path === '/login'}">
+          <md-icon>settings</md-icon> <span>Login</span>
+        </md-list-item>
+
       </md-list>
     </md-sidenav>
   </div>

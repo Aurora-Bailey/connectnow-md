@@ -27,7 +27,6 @@ export default {
   transition: all .4s cubic-bezier(.25,.8,.25,1);
 
   .page {
-    color: purple;
     overflow: auto;
     padding: 24px;
   }
@@ -35,6 +34,13 @@ export default {
 @media (min-width: 1281px) {
   #app {
     padding-left: 260px;
+  }
+}
+@media (max-width: 480px) {
+  #app {
+    .page {
+      padding: 24px 8px;
+    }
   }
 }
 

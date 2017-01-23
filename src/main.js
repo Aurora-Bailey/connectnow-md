@@ -19,10 +19,13 @@ Vue.use(JsonApi)
 Vue.material.registerTheme({
   default: {
     primary: 'blue',
-    accent: 'deep-orange'
+    accent: 'deep-orange',
+    background: 'white'
   },
   white: {
-    primary: 'white'
+    primary: 'white',
+    accent: 'deep-orange',
+    background: 'white'
   }
 })
 

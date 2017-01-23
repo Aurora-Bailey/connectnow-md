@@ -1,5 +1,8 @@
 <template>
   <div class="groups">
+    <div v-for="i in 100">
+      Line of text {{i}}
+    </div>
     Groups
   </div>
 </template>
@@ -12,5 +15,6 @@ export default {
 <style lang="scss" scoped>
 .groups {
   color: purple;
+  overflow: auto;
 }
 </style>

@@ -15,6 +15,17 @@ Vue.use(VueResource)
 Vue.use(VueMaterial)
 Vue.use(JsonApi)
 
+// Theme
+Vue.material.registerTheme({
+  default: {
+    primary: 'blue',
+    accent: 'deep-orange'
+  },
+  white: {
+    primary: 'white'
+  }
+})
+
 // Router thing
 const router = new VueRouter({
   // History mode makes links prettier, but requires dedicated hosting. (or in s3 set 404 to index.html)

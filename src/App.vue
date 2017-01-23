@@ -19,9 +19,17 @@ export default {
   height: 100vh;
   width: 100vw;
   display: flex;
+  flex: 1;
   flex-flow: column;
   position: relative;
   overflow: hidden;
   z-index: 1;
+  transition: all .4s cubic-bezier(.25,.8,.25,1);
 }
+@media (min-width: 1281px) {
+  #app {
+    padding-left: 260px;
+  }
+}
+
 </style>

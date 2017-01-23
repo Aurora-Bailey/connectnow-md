@@ -1,5 +1,5 @@
 <template>
-  <div class="not-found">
+  <div class="not-found page">
     404 Page not found!
   </div>
 </template>
@@ -11,6 +11,5 @@ export default {
 
 <style lang="scss" scoped>
 .not-found {
-  color: red;
 }
 </style>

@@ -91,7 +91,7 @@ export default {
     display: none;
   }
   #main-toolbar .toolbar-title {
-    margin-left: 24px
+    margin-left: 16px
   }
 }
 </style>

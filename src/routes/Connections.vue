@@ -1,5 +1,5 @@
 <template>
-  <div class="connections">
+  <div class="connections page">
     Connections
   </div>
 </template>
@@ -11,6 +11,5 @@ export default {
 
 <style lang="scss" scoped>
 .connections {
-  color: blue;
 }
 </style>

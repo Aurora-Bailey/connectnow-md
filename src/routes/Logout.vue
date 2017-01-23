@@ -1,5 +1,5 @@
 <template>
-  <div class="logout">
+  <div class="logout page">
     Logout
   </div>
 </template>
@@ -11,6 +11,5 @@ export default {
 
 <style lang="scss" scoped>
 .logout {
-  color: blue;
 }
 </style>

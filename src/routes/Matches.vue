@@ -1,5 +1,5 @@
 <template>
-  <div class="matches">
+  <div class="matches page">
     Matches
   </div>
 </template>
@@ -11,6 +11,5 @@ export default {
 
 <style lang="scss" scoped>
 .matches {
-  color: blue;
 }
 </style>

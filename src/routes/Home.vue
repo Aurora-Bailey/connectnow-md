@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home page">
     Home
   </div>
 </template>
@@ -11,6 +11,5 @@ export default {
 
 <style lang="scss" scoped>
 .home {
-  color: blue;
 }
 </style>

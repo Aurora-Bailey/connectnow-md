@@ -1,5 +1,5 @@
 <template>
-  <div class="profile">
+  <div class="profile page">
     Profile
   </div>
 </template>
@@ -11,6 +11,5 @@ export default {
 
 <style lang="scss" scoped>
 .profile {
-  color: orange;
 }
 </style>

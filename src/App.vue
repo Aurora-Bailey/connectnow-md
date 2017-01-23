@@ -25,6 +25,12 @@ export default {
   overflow: hidden;
   z-index: 1;
   transition: all .4s cubic-bezier(.25,.8,.25,1);
+
+  .page {
+    color: purple;
+    overflow: auto;
+    padding: 24px;
+  }
 }
 @media (min-width: 1281px) {
   #app {

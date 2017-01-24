@@ -39,7 +39,7 @@ export default {
 @media (max-width: 480px) {
   #app {
     .page {
-      padding: 24px 8px;
+      padding: 16px;
     }
   }
 }

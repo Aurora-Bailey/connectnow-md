@@ -1,1 +1,1 @@
-{"valid":true,"token":"HTRSHST$T#$EYHDR^D$W"}
+{"success":true,"token":"HTRSHST$T#$EYHDR^D$W"}

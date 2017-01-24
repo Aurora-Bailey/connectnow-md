@@ -14,7 +14,7 @@ import TopNav from './components/TopNav'
 // Router
 export default [
   { name: 'Home', path: '/', components: { default: Home, nav: TopNav } },
-  { name: 'Login', path: '/login', components: { default: Login, nav: TopNav } },
+  { name: 'Login', path: '/login', components: { default: Login} },
   { name: 'Logout', path: '/logout', components: { default: Logout } },
   { name: 'Matches', path: '/matches', components: { default: Matches, nav: TopNav } },
   { name: 'Connections', path: '/connections', components: { default: Connections, nav: TopNav } },

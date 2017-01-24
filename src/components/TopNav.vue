@@ -19,7 +19,7 @@
       <md-toolbar class="sidebar-logo md-theme-white">
         <router-link to="/">
           <img src="../assets/logo.png" alt="Vue">
-          <span>Connect Now</span>
+          <!-- <span>Connect Now</span> -->
         </router-link>
       </md-toolbar>
 

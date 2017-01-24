@@ -11,11 +11,13 @@ import Logout from './routes/Logout'
 
 // Nav bars
 import TopNav from './components/TopNav'
+import HomePageNav from './components/HomePageNav'
 
 // Router
 export default [
-  { name: 'Home', path: '/', components: { default: Home, nav: TopNav } },
+  { name: 'Home', path: '/', components: { default: Home, nav: HomePageNav } },
   { name: 'Login', path: '/login', components: { default: Login} },
+  { name: 'Signup', path: '/login/:tab', components: { default: Login} },
   { name: 'Forgot Password', path: '/forgot_password', components: { default: ForgotPassword} },
   { name: 'Logout', path: '/logout', components: { default: Logout } },
   { name: 'Matches', path: '/matches', components: { default: Matches, nav: TopNav } },

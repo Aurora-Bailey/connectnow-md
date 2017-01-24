@@ -54,7 +54,8 @@ new Vue({
   router,
   data () {
     return {
-      version: "0.001"
+      version: "0.001",
+      scroll: 0
     }
   }
 })

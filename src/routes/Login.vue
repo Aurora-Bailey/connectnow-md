@@ -35,7 +35,7 @@
               </div>
             </md-tab>
 
-            <md-tab md-label="Create Account">
+            <md-tab md-label="Create Account" :md-active="$route.params.tab === 'signup'">
               <form validate id="signup-form" @submit.prevent="sendSignup()">
 
                 <md-subheader>Account Information</md-subheader>

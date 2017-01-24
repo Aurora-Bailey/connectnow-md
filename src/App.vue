@@ -31,6 +31,9 @@ export default {
     padding: 24px;
     transition: all .4s cubic-bezier(.25,.8,.25,1);
   }
+  .page.no-padding {
+    padding: 0;
+  }
 }
 @media (min-width: 1281px) {
   #app .page {

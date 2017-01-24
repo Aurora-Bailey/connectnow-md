@@ -1,6 +1,6 @@
 <template>
   <div class="top-nav">
-    <md-whiteframe id="main-toolbar" md-tag="md-toolbar" md-elevation="2" md-theme="light-blue">
+    <md-whiteframe id="main-toolbar" md-tag="md-toolbar" md-elevation="2">
       <md-button class="md-icon-button sidebar-toggle" @click="$refs.sidenav.toggle()">
         <md-icon>menu</md-icon>
       </md-button>

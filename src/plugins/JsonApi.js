@@ -1,3 +1,5 @@
+let forceTextAPI = true;
+
 let server = {
   // localhost || www.example.com
   host: window.location.hostname,
@@ -12,10 +14,10 @@ let server = {
   path: window.location.pathname,
 
   // /static/api/ || /api/
-  api: window.location.origin + (window.location.hostname === 'localhost' ? '/static/api/' : '/api/'),
+  api: window.location.origin + (window.location.hostname === 'localhost' || forceTextAPI ? '/static/api/' : '/api/'),
 
   // .txt || .php || ''
-  apiext: (window.location.hostname === 'localhost' ? '.txt' : '.php')
+  apiext: (window.location.hostname === 'localhost' || forceTextAPI ? '.txt' : '.php')
 }
 
 let JsonApi = {}
@@ -29,7 +31,7 @@ JsonApi.install = function (Vue, options) {
     // Request Data
     // Use get when posting to localhost
     // localhost only serves txt files
-    if (server.host === 'localhost') {
+    if (server.host === 'localhost' || forceTextAPI) {
       this.$http.get(apiurl)
       .then((response) => { return response.json() }, (response) => { return new Promise(function (resolve, reject) { resolve({error: ['Error with request.', response.body]}) }) })
       .then((json) => { return new Promise(function (resolve, reject) { resolve(json) }) }, (response) => { return new Promise(function (resolve, reject) { resolve({error: ['Error with json.', response]}) }) })

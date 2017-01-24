@@ -29,11 +29,18 @@ export default {
   .page {
     overflow: auto;
     padding: 24px;
+    transition: all .4s cubic-bezier(.25,.8,.25,1);
   }
 }
 @media (min-width: 1281px) {
-  #app {
-    padding-left: 260px;
+  #app .page {
+    margin-left: 260px;
+  }
+  #app .page.no-sidebar {
+    margin-left: 0;
+  }
+  #main-toolbar {
+    margin-left: 260px;
   }
 }
 @media (max-width: 480px) {

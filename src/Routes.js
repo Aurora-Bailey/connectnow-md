@@ -6,6 +6,7 @@ import Groups from './routes/Groups'
 import Profile from './routes/Profile'
 import NotFound from './routes/NotFound'
 import Login from './routes/Login'
+import ForgotPassword from './routes/ForgotPassword'
 import Logout from './routes/Logout'
 
 // Nav bars
@@ -15,6 +16,7 @@ import TopNav from './components/TopNav'
 export default [
   { name: 'Home', path: '/', components: { default: Home, nav: TopNav } },
   { name: 'Login', path: '/login', components: { default: Login} },
+  { name: 'Forgot Password', path: '/forgot_password', components: { default: ForgotPassword} },
   { name: 'Logout', path: '/logout', components: { default: Logout } },
   { name: 'Matches', path: '/matches', components: { default: Matches, nav: TopNav } },
   { name: 'Connections', path: '/connections', components: { default: Connections, nav: TopNav } },

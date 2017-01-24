@@ -1,5 +1,5 @@
 <template>
-  <div class="login page">
+  <div class="login page no-sidebar">
     <md-layout md-gutter>
       <md-layout md-flex-large="33" md-flex-medium="25" md-flex-small="20" md-hide-xsmall></md-layout>
       <md-layout md-flex-large="33" md-flex-medium="50" md-flex-small="60" md-flex-xsmall="100">
@@ -24,7 +24,7 @@
                 </md-input-container>
               </form>
               <div class="button-bar">
-                <router-link to="/reset-password" class="md-primary" tag="md-button">Forgot Password?</router-link>
+                <router-link to="/forgot_password" class="md-primary" tag="md-button">Forgot Password?</router-link>
                 <!-- <span style="flex: 1"></span>
                 <md-checkbox name="stay-signed-in">Stay Signed in</md-checkbox> -->
               </div>
@@ -198,11 +198,6 @@ export default {
 
 <style lang="scss" scoped>
 .login {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 .login-box {
   width: 100%;

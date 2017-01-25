@@ -36,7 +36,7 @@
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">equalizer</md-icon>
           <div class="mini-info-box">
-            <h2 class="info-title">Share Your experiance.</h2>
+            <h2 class="info-title">Share Your experience.</h2>
             <hr/>
             <p class="info">Tell us your level of experience in an area so we can help you connect to the right individuals for whatever you're trying to do.</p>
           </div>
@@ -52,7 +52,7 @@
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">groups</md-icon>
           <div class="mini-info-box">
-            <h2 class="info-title">Groups</h2>
+            <h2 class="info-title">Form Groups</h2>
             <hr/>
             <p class="info">Form groups with your new friends and contacts — collaborating, meeting up, and interacting has never been this easy.</p>
           </div>
@@ -70,8 +70,9 @@
         <md-layout class="mini-content-box" md-flex-large="50" md-flex-medium="50" md-flex-small="100" md-flex-xsmall="100">
           <div>
             <md-subheader class="md-primary large-header">About Connect Now</md-subheader>
-            <p>We are a small team that believes that it's time for the way we connect to people to catch up with technology.</p>
-            <p>Connect Now provides you with a platform that will allow you to connect to the right people so that you can spend more time doing what you want to do with people who are going to appreciate the same activities and less time wishing you knew more people that were into the same things as you. See an example to the left of how an example profile might highlight some interests</p>
+            <p>We believe that it’s time for the way we meet people to catch up to the 21st century. For thousands of years we’ve met people organically (and this isn’t going anywhere), but what if there was a way to find the people you have the highest chance of getting along well with or working with?</p>
+            <p>Connect Now provides a platform that aims to accomplish just that. Spend more time doing what you want to do with people who are into the same things that you are.</p>
+            <p>See an example to the right of what some tags might look like on your profile.</p>
           </div>
         </md-layout>
         <md-layout class="mini-content-box" md-flex-large="50" md-flex-medium="50" md-flex-small="100" md-flex-xsmall="100">
@@ -98,7 +99,7 @@
     </div>
 
     <div class="footer">
-      Copyright © 2016 Connect Now
+      Copyright © 2016 Connect Now Group, Inc.
     </div>
   </div>
 </template>

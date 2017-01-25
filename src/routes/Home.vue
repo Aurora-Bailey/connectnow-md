@@ -3,8 +3,8 @@
 
 
     <div class="picture-box like-minded-people">
-      <h2>FIND LIKE-MINDED PEOPLE</h2>
-      <p>WANT TO CONNECT WITH PEOPLE WHO SHARE YOUR PASSIONS AND INTERESTS IN LIFE? WE DO, TOO. THAT'S WHY WE CREATED CONNECT NOW — A PLATFORM FOR CONNECTING TO PEOPLE WHO LIKE WHAT YOU LIKE AND WANT TO MEET, HANG OUT WITH, OR JUST TALK TO SOMEONE LIKE YOU.</p>
+      <h2>Find your people.</h2>
+      <p>Connect Now is the Google search for finding like-minded people you've been waiting for. Find individuals or groups that share your interests, passions, and purpose in life.</p>
     </div>
 
     <div class="content-box sign-up-process">
@@ -28,7 +28,7 @@
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">rowing</md-icon>
           <div class="mini-info-box">
-            <h2 class="info-title">Add your interests</h2>
+            <h2 class="info-title">Add your tags</h2>
             <hr/>
             <p class="info">Add a list of things that you're interested in connecting for — this could be anything from brands you like, activities you're interested in, skills you know or want to learn, or ideas that excite you.</p>
           </div>
@@ -36,9 +36,9 @@
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">equalizer</md-icon>
           <div class="mini-info-box">
-            <h2 class="info-title">Share Your Proficiency</h2>
+            <h2 class="info-title">Share Your experiance.</h2>
             <hr/>
-            <p class="info">Let people know your level of skill or knowledge on topics — find people to learn from or share your knowledge with people who are just learning.</p>
+            <p class="info">Tell us your level of experience in an area so we can help you connect to the right individuals for whatever you're trying to do.</p>
           </div>
         </md-layout>
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
@@ -61,8 +61,8 @@
     </div>
 
     <div class="picture-box learn-from-the-greats">
-      <h2>WANT TO LEARN FROM THE GREATS?</h2>
-      <p>CONNECT TO PROS AND BEGINNERS ALIKE, SHARE YOUR KNOWLEDGE, AND LEARN FROM OTHER PEOPLE BY SHARING IDEAS, IMAGES, AND FILES THROUGH OUR PLATFORM. TELL US YOUR LEVEL OF SKILL IN A PARTICULAR AREA SO WE CAN HELP YOU CONNECT TO THE RIGHT INDIVIDUALS FOR WHATEVER YOU'RE TRYING TO DO.</p>
+      <h2>Share your experience.</h2>
+      <p>Tell us your level of experience in an area so we can help you connect to the right individuals for whatever you're trying to do.</p>
     </div>
 
     <div class="content-box about-connect-now">

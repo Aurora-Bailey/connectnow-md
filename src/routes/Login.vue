@@ -8,7 +8,7 @@
             <md-icon class="md-size-3x">account_circle</md-icon>
           </md-toolbar>
 
-          <md-tabs md-fixed md-theme="default-dark">
+          <md-tabs md-centered md-theme="default-dark">
             <md-tab md-label="Sign in">
               <form validate id="login-form" @submit.prevent="sendLogin()">
                 <md-input-container>

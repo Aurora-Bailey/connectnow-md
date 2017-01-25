@@ -9,7 +9,7 @@
 
     <div class="content-box sign-up-process">
       <md-layout>
-        <md-layout class="mini-content-box" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
+        <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">person</md-icon>
           <div class="mini-info-box">
             <h2 class="info-title">Sign up</h2>
@@ -17,7 +17,7 @@
             <p class="info"><router-link to="/login/signup">Sign up</router-link> for an account.</p>
           </div>
         </md-layout>
-        <md-layout class="mini-content-box" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
+        <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">account_box</md-icon>
           <div class="mini-info-box">
             <h2 class="info-title">Create a profile</h2>
@@ -25,7 +25,7 @@
             <p class="info">Enter your basic information. Don't worry, no one will see anything except your first name and general location</p>
           </div>
         </md-layout>
-        <md-layout class="mini-content-box" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
+        <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">rowing</md-icon>
           <div class="mini-info-box">
             <h2 class="info-title">Add your interests</h2>
@@ -33,7 +33,7 @@
             <p class="info">Add a list of things that you're interested in connecting for — this could be anything from brands you like, activities you're interested in, skills you know or want to learn, or ideas that excite you.</p>
           </div>
         </md-layout>
-        <md-layout class="mini-content-box" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
+        <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">equalizer</md-icon>
           <div class="mini-info-box">
             <h2 class="info-title">Share Your Proficiency</h2>
@@ -41,7 +41,7 @@
             <p class="info">Let people know your level of skill or knowledge on topics — find people to learn from or share your knowledge with people who are just learning.</p>
           </div>
         </md-layout>
-        <md-layout class="mini-content-box" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
+        <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">compare_arrows</md-icon>
           <div class="mini-info-box">
             <h2 class="info-title">Connect!</h2>
@@ -49,7 +49,7 @@
             <p class="info">Search for matches based on a variety of different filters — find the right people at the right times and have a great time in the process!</p>
           </div>
         </md-layout>
-        <md-layout class="mini-content-box" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
+        <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">groups</md-icon>
           <div class="mini-info-box">
             <h2 class="info-title">Groups</h2>
@@ -148,6 +148,7 @@ export default {
   }
 }
 .mini-content-box {
+  flex: 1;
   padding: 12px 24px;
 
   @media (max-width: 960px) {

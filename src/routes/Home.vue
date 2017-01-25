@@ -5,6 +5,7 @@
     <div class="picture-box like-minded-people">
       <h2>Find your people.</h2>
       <p>Connect Now is the Google search for finding like-minded people you've been waiting for. Find individuals or groups that share your interests, passions, and purpose in life.</p>
+      <router-link to="/login/signup" tag="md-button" class="md-raised md-primary">Sign up</router-link>
     </div>
 
     <div class="content-box sign-up-process">
@@ -12,7 +13,7 @@
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">person</md-icon>
           <div class="mini-info-box">
-            <h2 class="info-title">Sign up</h2>
+            <h2 class="info-title">Sign Up</h2>
             <hr/>
             <p class="info"><router-link to="/login/signup">Sign up</router-link> for an account.</p>
           </div>
@@ -20,7 +21,7 @@
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">account_box</md-icon>
           <div class="mini-info-box">
-            <h2 class="info-title">Create a profile</h2>
+            <h2 class="info-title">Create a Profile</h2>
             <hr/>
             <p class="info">Enter your basic information. Don't worry, no one will see anything except your first name and general location</p>
           </div>
@@ -28,7 +29,7 @@
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">rowing</md-icon>
           <div class="mini-info-box">
-            <h2 class="info-title">Add your tags</h2>
+            <h2 class="info-title">Add Your Tags</h2>
             <hr/>
             <p class="info">Add a list of things that you're interested in connecting for — this could be anything from brands you like, activities you're interested in, skills you know or want to learn, or ideas that excite you.</p>
           </div>
@@ -36,7 +37,7 @@
         <md-layout class="mini-content-box" md-flex-xlarge="33" md-flex-large="33" md-flex-medium="50" md-flex-small="50" md-flex-xsmall="100">
           <md-icon class="md-size-2x">equalizer</md-icon>
           <div class="mini-info-box">
-            <h2 class="info-title">Share Your experience.</h2>
+            <h2 class="info-title">Share Your Experience</h2>
             <hr/>
             <p class="info">Tell us your level of experience in an area so we can help you connect to the right individuals for whatever you're trying to do.</p>
           </div>
@@ -63,6 +64,7 @@
     <div class="picture-box learn-from-the-greats">
       <h2>Share your experience.</h2>
       <p>Tell us your level of experience in an area so we can help you connect to the right individuals for whatever you're trying to do.</p>
+      <router-link to="/login/signup" tag="md-button" class="md-raised md-primary">Sign up</router-link>
     </div>
 
     <div class="content-box about-connect-now">

@@ -2,7 +2,7 @@
   <div class="profile page">
     <div class="narrow-wrapper-840">
       <md-layout md-gutter="16">
-        <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50" md-flex-large="50" md-flex-xlarge="50">
+        <md-layout style="flex: 1;" md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50" md-flex-large="50" md-flex-xlarge="50">
           <md-whiteframe class="container-module">
             <md-toolbar class="md-dense">
               <h2 class="md-title toolbar-title">Profile Picture</h2>
@@ -15,7 +15,7 @@
             </div>
           </md-whiteframe>
         </md-layout>
-        <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50" md-flex-large="50" md-flex-xlarge="50">
+        <md-layout style="flex: 1;" md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50" md-flex-large="50" md-flex-xlarge="50">
           <md-whiteframe  class="container-module">
             <md-toolbar class="md-dense">
               <h2 class="md-title toolbar-title">Account</h2>
@@ -81,25 +81,49 @@
             </div>
           </md-whiteframe>
         </md-layout>
-        <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50" md-flex-large="50" md-flex-xlarge="50">
+        <md-layout style="flex: 1;" md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50" md-flex-large="50" md-flex-xlarge="50">
           <md-whiteframe  class="container-module">
             <md-toolbar class="md-dense">
               <h2 class="md-title toolbar-title">Short Bio</h2>
-              <md-button class="md-icon-button">
+              <!-- <md-button v-if="editBioMode" class="md-icon-button" v-on:click="editBioMode=!editBioMode">
+                <md-icon>delete_forever</md-icon>
+              </md-button> -->
+              <md-button v-if="editBioMode" class="md-icon-button" v-on:click="editBioMode=!editBioMode">
+                <md-icon>check_circle</md-icon>
+              </md-button>
+              <md-button v-if="!editBioMode" class="md-icon-button" v-on:click="editBioMode=!editBioMode">
                 <md-icon>edit</md-icon>
               </md-button>
             </md-toolbar>
-            <div class="module-content short-bio">
-              <h2 class="md-title">Tagline Lorem Ipsum!</h2>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <div class="module-content short-bio" v-if="!editBioMode">
+              <h2 class="md-title">{{tagline}}</h2>
+              <p>{{bio}}</p>
+            </div>
+            <div class="module-content" v-if="editBioMode">
+              <form novalidate @submit.stop.prevent="">
+                <md-input-container>
+                  <label>Tagline</label>
+                  <md-input v-model="tagline" maxlength="60"></md-input>
+                </md-input-container>
+                <md-input-container>
+                  <label>Short Bio</label>
+                  <md-textarea v-model="bio" style="min-height: 240px; max-height: none;"></md-textarea>
+                </md-input-container>
+              </form>
             </div>
           </md-whiteframe>
         </md-layout>
-        <md-layout md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50" md-flex-large="50" md-flex-xlarge="50">
+        <md-layout style="flex: 1;" md-flex-xsmall="100" md-flex-small="50" md-flex-medium="50" md-flex-large="50" md-flex-xlarge="50">
           <md-whiteframe  class="container-module">
             <md-toolbar class="md-dense">
               <h2 class="md-title toolbar-title">Tags</h2>
-              <md-button class="md-icon-button" v-on:click="editTagMode=!editTagMode">
+              <!-- <md-button v-if="editTagMode" class="md-icon-button" v-on:click="editTagMode=!editTagMode">
+                <md-icon>delete_forever</md-icon>
+              </md-button> -->
+              <md-button v-if="editTagMode" class="md-icon-button" v-on:click="editTagMode=!editTagMode">
+                <md-icon>check_circle</md-icon>
+              </md-button>
+              <md-button v-if="!editTagMode" class="md-icon-button" v-on:click="editTagMode=!editTagMode">
                 <md-icon>edit</md-icon>
               </md-button>
             </md-toolbar>
@@ -114,12 +138,18 @@
                 </md-input-container>
               </form>
               <div class="tag-chips">
-                <md-chip :md-deletable="editTagMode" v-for="(tag, index) in tags" v-on:delete="removeTag(index)" :class="{'chip-highlight': tag.h}">
-                  <span v-on:click="highlightTag(index)">{{tag.v}} </span><span v-if="tag.h">(Highlight)</span>
-                  <md-button class="md-icon-button md-dense">
+                <div class="chip" v-for="(tag, index) in tags" :class="{'buttons-visible': editTagMode, 'chip-novice': tag.h === 1, 'chip-advanced': tag.h === 2, 'chip-expert': tag.h === 3}">
+                  <span class="chip-text">{{tag.v}}</span>
+                  <span class="chip-highlight-text" v-if="tag.h === 1">&nbsp;(Novice)</span>
+                  <span class="chip-highlight-text" v-if="tag.h === 2">&nbsp;(Advanced)</span>
+                  <span class="chip-highlight-text" v-if="tag.h === 3">&nbsp;(Expert)</span>
+                  <md-button class="chip-button md-icon-button" v-on:click="highlightTag(index)">
                     <md-icon>star</md-icon>
                   </md-button>
-                </md-chip>
+                  <md-button class="chip-button md-icon-button" v-on:click="removeTag(index)">
+                    <md-icon>cancel</md-icon>
+                  </md-button>
+                </div>
               </div>
             </div>
           </md-whiteframe>
@@ -134,22 +164,27 @@ export default {
   name: 'profile',
   data () {
     return {
+      editBioMode: false,
       editTagMode: false,
+      bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+      tagline: 'Self Title or Tagline.',
       enterTag: '',
-      tags: []
+      tags: [{"v":"London","h":0},{"v":"Paris","h":3},{"v":"Budapest","h":2},{"v":"Prague","h":0},{"v":"Berlin","h":0},{"v":"Amsterdam","h":0},{"v":"Copenhagen","h":0},{"v":"Madrid","h":0},{"v":"Barcelona","h":0},{"v":"Stockholm","h":2},{"v":"Rome","h":1},{"v":"Vienna","h":0},{"v":"Lisbon","h":0},{"v":"Riga","h":0},{"v":"Athens","h":0},{"v":"Munich","h":0},{"v":"Bucharest","h":0},{"v":"Dublin","h":1},{"v":"Helsinki","h":0},{"v":"Tallinn","h":0},{"v":"Zagreb","h":0},{"v":"Oslo","h":0}]
     }
   },
   methods: {
     removeTag: function (index) {
+      console.log('removing tag ' + index)
       this.tags.splice(index, 1)
     },
     addTag: function () {
-      if (this.enterTag.replace(/\W/g, '') !== '') this.tags.push({v: this.enterTag, h: false})
+      if (this.enterTag.replace(/\W/g, '') !== '') this.tags.push({v: this.enterTag, h: 0})
       this.enterTag = ''
     },
     highlightTag: function (index) {
       console.log(index)
-      this.tags[index].h = !this.tags[index].h
+      this.tags[index].h = (this.tags[index].h + 1) % 4
+      console.log(JSON.stringify(this.tags))
     },
     asdf: function () {
       console.log('asdf')
@@ -192,6 +227,7 @@ export default {
   p {
     font-size: 18px;
     text-indent: 32px;
+    white-space: pre-wrap;
   }
 }
 .tag-chips {

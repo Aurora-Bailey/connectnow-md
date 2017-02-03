@@ -18,6 +18,90 @@
     margin-left: 0;
   }
 }
+.chip {
+  height: 32px;
+  padding: 0 12px;
+  margin: 2px;
+  display: inline-block;
+  border-radius: 32px;
+  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+  font-size: 0; // Hide the spaces between the elements
+  line-height: 32px;
+  white-space: nowrap;
+  background-color: rgba(0, 0, 0, .12);
+
+  .chip-text, .chip-highlight-text, .chip-button {
+    font-size: 13px; // Reset the space hide thing
+  }
+
+  .chip-button {
+    width: 0;
+    min-width: 0;
+    height: 24px;
+    min-height: 24px;
+    margin: 0;
+    padding: 0;
+    border-radius: 24px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+    color: rgba(0, 0, 0, 0);
+    overflow: visible;
+    pointer-events: none;
+
+    .md-icon {
+      width: 20px;
+      min-width: 20px;
+      height: 20px;
+      min-height: 20px;
+      margin: 0;
+      font-size: 20px;
+    }
+  }
+
+  &.buttons-visible {
+    padding-right: 4px;
+
+    .chip-button {
+      width: 24px;
+      min-width: 24px;
+      margin: 4px 0;
+      color: rgba(0, 0, 0, .38);
+      pointer-events: auto;
+    }
+    // &:hover {
+    //   .chip-button {
+    //     color: #fff;
+    //   }
+    // }
+  }
+  // &:hover {
+  //   background-color: rgba(0, 0, 0, .54);
+  //   color: #fff;
+  // }
+  &.chip-novice {
+    background-color: #2196f3;
+    color: white;
+
+    &.buttons-visible .chip-button {
+      color: white;
+    }
+  }
+  &.chip-advanced {
+    background-color: #1976d2;
+    color: white;
+
+    &.buttons-visible .chip-button {
+      color: white;
+    }
+  }
+  &.chip-expert {
+    background-color: #0d47a1;
+    color: white;
+
+    &.buttons-visible .chip-button {
+      color: white;
+    }
+  }
+}
 .narrow-wrapper-480 {
   margin: auto;
   width: 480px;

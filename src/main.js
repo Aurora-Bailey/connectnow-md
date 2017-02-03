@@ -5,9 +5,12 @@ import App from './App'
 import VueRouter from 'vue-router'
 import VueResource from 'vue-resource'
 import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.css'
 import JsonApi from './plugins/JsonApi'
 import Routes from './Routes'
+
+// Styles
+import 'vue-material/dist/vue-material.css'
+import './Style.scss'
 
 // The Vue thing
 Vue.use(VueRouter)

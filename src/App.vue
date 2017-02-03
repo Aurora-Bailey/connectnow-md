@@ -25,33 +25,5 @@ export default {
   overflow: hidden;
   z-index: 1;
   transition: all .4s cubic-bezier(.25,.8,.25,1);
-
-  .page {
-    overflow: auto;
-    padding: 24px;
-    transition: all .4s cubic-bezier(.25,.8,.25,1);
-  }
-  .page.no-padding {
-    padding: 0;
-  }
 }
-@media (min-width: 1281px) {
-  #app .page {
-    margin-left: 260px;
-  }
-  #app .page.no-sidebar {
-    margin-left: 0;
-  }
-  #main-toolbar {
-    margin-left: 260px;
-  }
-}
-@media (max-width: 480px) {
-  #app {
-    .page {
-      padding: 16px;
-    }
-  }
-}
-
 </style>

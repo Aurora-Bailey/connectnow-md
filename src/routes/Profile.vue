@@ -169,7 +169,7 @@ export default {
       bio: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
       tagline: 'Self Title or Tagline.',
       enterTag: '',
-      tags: [{"v":"London","h":0},{"v":"Paris","h":3},{"v":"Budapest","h":2},{"v":"Prague","h":0},{"v":"Berlin","h":0},{"v":"Amsterdam","h":0},{"v":"Copenhagen","h":0},{"v":"Madrid","h":0},{"v":"Barcelona","h":0},{"v":"Stockholm","h":2},{"v":"Rome","h":1},{"v":"Vienna","h":0},{"v":"Lisbon","h":0},{"v":"Riga","h":0},{"v":"Athens","h":0},{"v":"Munich","h":0},{"v":"Bucharest","h":0},{"v":"Dublin","h":1},{"v":"Helsinki","h":0},{"v":"Tallinn","h":0},{"v":"Zagreb","h":0},{"v":"Oslo","h":0}]
+      tags: [{"v":"Budapest","h":3},{"v":"Oslo","h":3},{"v":"Stockholm","h":2},{"v":"Rome","h":1},{"v":"Dublin","h":1},{"v":"Riga","h":0},{"v":"Amsterdam","h":0},{"v":"Madrid","h":0},{"v":"Barcelona","h":0},{"v":"London","h":0},{"v":"Prague","h":0},{"v":"Vienna","h":0},{"v":"Lisbon","h":0},{"v":"Copenhagen","h":0},{"v":"Athens","h":0},{"v":"Munich","h":0},{"v":"Bucharest","h":0},{"v":"Berlin","h":0},{"v":"Helsinki","h":0},{"v":"Tallinn","h":0},{"v":"Zagreb","h":0},{"v":"Paris","h":0}]
     }
   },
   methods: {
@@ -184,6 +184,11 @@ export default {
     highlightTag: function (index) {
       console.log(index)
       this.tags[index].h = (this.tags[index].h + 1) % 4
+      this.tags.sort(function (a, b) {
+        if (a.h > b.h) return -1
+        if (a.h < b.h) return 1
+        return 0
+      })
       console.log(JSON.stringify(this.tags))
     },
     asdf: function () {
